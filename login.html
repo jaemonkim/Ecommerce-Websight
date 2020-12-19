@@ -9,17 +9,11 @@
 <script>
 	Bmob.initialize("f2f07890791911b2", "990816");
 	Bmob.debug(true);
-	function register(){
-		let params = {
-		    username: document.getElementById("username").value,
-		    password: document.getElementById("pwd").value,
-		   
-		    
-		}
-		Bmob.User.register(params).then(res => {
-		 location.href ="about.html"
-		}).catch(err => {
-		 alert(err.error);
+	function login(){
+		Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
+		    location.href ="index.html"
+		 }).catch(err => {
+		   alert(err.error);
 		});
 	}
 </script>
@@ -31,14 +25,14 @@
             <h2>欢迎回来</h2>
             <label>
                 <span>用户名</span>
-                <input type="username" />
+                <input type="username" id="username" />
             </label>
             <label>
                 <span>密码</span>
-                <input type="password" />
+                <input type="password" id="pwd" />
             </label>
             <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
-            <button type="button" class="submit">登 录</button>
+            <button type="button"  onclick="login()"  class="submit">登 录</button>
             <button type="button" class="fb-btn">使用 <span>QQ</span> 帐号登录</button>
         </div>
         <div class="sub-cont">
@@ -60,7 +54,7 @@
                 <h2>立即注册</h2>
                 <label>
                     <span>用户名</span>
-                    <input type="text"  id="username" />
+                    <input type="text"   />
                 </label>
                 <label>
                     <span>邮箱</span>
@@ -68,9 +62,9 @@
                 </label>
                 <label>
                     <span>密码</span>
-                    <input type="password"  id="pwd" />
+                    <input type="password"  />
                 </label>
-                <button type="button" onclick="register()" class="submit">注 册</button>
+                <button type="button"  class="submit">注 册</button>
                 <button type="button" class="fb-btn">使用 <span>QQ</span> 帐号注册</button>
             </div>
         </div>
