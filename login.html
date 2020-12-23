@@ -10,14 +10,10 @@
 	Bmob.initialize("f2f07890791911b2", "990816");
 	Bmob.debug(true);
 	function login(){
-		let params ={
-			username:document.getElementById("username").value,
-			password:document.getElementById("pwd").value
-		}
-		Bmob.User.login(params).then(res => {
-		    location.href ="index.html"
+		 Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
+		  location.href="index.html"
 		 }).catch(err => {
-		   alert(err.error);
+		  alert(err.error);
 		});
 	}
 </script>
@@ -36,7 +32,7 @@
                 <input type="password" id="pwd" />
             </label>
             <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
-            <button type="button"  onclick="login()"  class="submit">登 录</button>
+            <button type="button" onclick="login()" class="submit">登 录</button>
             <button type="button" class="fb-btn">使用 <span>QQ</span> 帐号登录</button>
         </div>
         <div class="sub-cont">
