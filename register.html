@@ -3,23 +3,21 @@
 
 <head>
 <meta charset="utf-8">
-<script src="js/bmob-2.2.4.min.js"></script>
+<script src="js/Bmob-2.2.4.min.js"></script>
 <title>HTML注册登录页面模板</title>
 <link rel="stylesheet" href="css/style.css">
 <script>
 	Bmob.initialize("f2f07890791911b2", "990816");
 	Bmob.debug(true);
 	function register(){
-		let params = {
-		    username: document.getElementById("username").value,
-		    password: document.getElementById("pwd").value,
-		   
-		    
+		let params ={
+			username:document.getElementById("username").value,
+			password:document.getElementById("pwd").value
 		}
 		Bmob.User.register(params).then(res => {
-		 location.href ="zhuceinfo.html"
-		}).catch(err => {
-		 alert(err.error);
+		    location.href ="zhuceinfo.html"
+		 }).catch(err => {
+		   alert(err.error);
 		});
 	}
 </script>
