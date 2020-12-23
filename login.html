@@ -10,7 +10,11 @@
 	Bmob.initialize("f2f07890791911b2", "990816");
 	Bmob.debug(true);
 	function login(){
-		Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
+		let params ={
+			username:document.getElementById("username").value,
+			password:document.getElementById("pwd").value
+		}
+		Bmob.User.login(params).then(res => {
 		    location.href ="index.html"
 		 }).catch(err => {
 		   alert(err.error);
