@@ -1,4 +1,8 @@
 # E-commerce Website
+- [E-commerce Website](#e-commerce-website)
+    + [What It Is](#what-it-is)
+    + [Building the Website](#building-the-website)
+    + [Why It Matters](#why-it-matters)
 
 ### What It Is
 
