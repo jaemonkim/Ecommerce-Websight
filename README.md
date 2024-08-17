@@ -12,9 +12,9 @@ This project is a logistics order management system for an e-commerce website.
 
 The website is built using the following technologies:
 
-Front-End: HTML, CSS, and JavaScript
-Deployment: GitHub Pages with custom DNS
-Backend: Powered by Bmob Cloud (a cloud-based SQL database service)
+- Front-End: HTML, CSS, and JavaScript
+- Deployment: GitHub Pages with custom DNS
+- Backend: Powered by Bmob Cloud (a cloud-based SQL database service)
 
 ### Why It Matters
 
